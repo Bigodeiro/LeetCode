@@ -42,7 +42,7 @@ class Solution2:
     def containsDuplicate(self, nums: List[int]) -> bool:
 
         i = 1
-        nums.sort
+        nums.sort()
 
         while i < len(nums):
             if nums[i] == nums[i-1]:
