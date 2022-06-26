@@ -5,7 +5,7 @@
 #* Hashset: usando hashset o algoritimo será muito mais eficiente
 
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate(self, nums: list[int]) -> bool:
 
         hashset = set()
 
@@ -17,10 +17,10 @@ class Solution:
                 hashset.add(n)
         return False
 
-#*Brute force: comparar cada elemento com o array inteiro
+#* Brute force: comparar cada elemento com o array inteiro
 
 class Solution1:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate(self, nums: list[int]) -> bool:
         i = 0
         j = 0
 
@@ -36,10 +36,10 @@ class Solution1:
             i += 1
         return False
 
-#*Sorting: Organizar o array e comparar os elementos adjacentes
+#* Sorting: Organizar o array e comparar os elementos adjacentes
 
 class Solution2:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate(self, nums: list[int]) -> bool:
 
         i = 1
         nums.sort()
