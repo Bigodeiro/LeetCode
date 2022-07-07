@@ -27,18 +27,36 @@ funções se quisermos.
 """
 if __name__ == "__main__":
 
-    print(f"{testef('teste')}\n") #*nota: é possivel usar as diferentes as aspas para conseguir usar o printf propriamente
-
-    #!FOR ... ELSE 
-    #? quando acaba o array o "else" é executado
-    arr = [1,2,3]
-    for x in arr:
-        print("as vezes")
-    else: print(f"sempre \n")
+    #!FOR ... ELSE
+    def for_selse():
+        #? quando acaba o array o "else" é executado
+        arr = [1,2,3]
+        for x in arr:
+            print("as vezes")
+        else: print(f"sempre \n")
 
     #! OPERADOR TERNÁRIO
-    score = 10 
+    def operador_ternario():
+        score = 10 
 
-        #?opção1 if condição else opção 2
-    result = "passou" if score > 6 else "reprouvou"
-    print(f"{result}\n")
+            #?opção1 if condição else opção 2
+        result = "passou" if score > 6 else "reprouvou"
+        print(f"{result}\n")
+
+    #! ENUMERATE
+    #? enumerate() é uma função que pode ser usada em um loop, ela retorna um contador de quantas vezes aconteceu o loop, e retorna a variavel/elemento de uma lista ou qualquer outra estrutura de dados que seja iterável
+
+    def enumumerate_1():
+        #*Se apenas uma variavel recebe o enumerate(), é retornado uma tupla com o numero da iteração, e o valor respectivo da varivel
+        var_iteravel = ['a', 'b', 'c', 'd']
+
+        for x in enumerate(var_iteravel):
+            print(f"{x} {type(x)}")
+    
+    def enumumerate_2():
+        #*Se duas variaveis recebem o enumerate(), é retornado um int com o numero da iteração, e o elemento respectivo 
+        var_iteravel = ['a', 'b', 'c', 'd']
+
+        for contador, valor in enumerate(var_iteravel):
+            print(f"{contador} {valor}")
+    
